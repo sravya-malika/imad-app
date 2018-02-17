@@ -63,7 +63,7 @@ app.get('/ui/style.css', function (req, res) {
 
 
 app.get('/article-one', function (req, res) {
-    res.send('article one requestedand will be served');
+    res.send(__dirname,'ui','article-one.html');
     
 });/*
 app.get('/article-two', function (req, res) {
