@@ -73,7 +73,7 @@ app.get('/article-two', function (req, res) {
 app.get('/article-one', function (req, res) {
   res.send('article two requested and served');
 });
-app.get('/article-three', function (req, res) {
+app.get('/article-five', function (req, res) {
   res.send('article three requested and served');
 });
 
