@@ -6,11 +6,16 @@ var app = express();
 app.use(morgan('combined'));
 
 
-/*var articleOne={
+var articleOne={
     title: 'article one i sravya',
     heading: 'Article One',
     date: '19-aug-2017',
-    content: '<p>i love doing web app.i love web app.i love doing web app.i love web app.i love doing web app.i love web appi love doing web app.i love web app </p>'
+    content: ` <p>i love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herevi love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from here
+            </p>
+            <p>i love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herevi love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from here
+            </p>
+            <p>i love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from herevi love doing web app.We can learn a lot from herei love doing web app.We can learn a lot from here
+            </p>`
     
     
 };
@@ -47,7 +52,7 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-*/
+
 
 
 
@@ -62,7 +67,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(articleOne));
 
     
 });
