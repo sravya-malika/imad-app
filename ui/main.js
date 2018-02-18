@@ -43,7 +43,7 @@ button.onclick = function(){
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //make a requst to server
-    // var request= new XMLHttpRequest();
+    var request= new XMLHttpRequest();
     
     //capture
   /*   var names = ['name1','name2','name3'];
