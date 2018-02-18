@@ -3,12 +3,12 @@
 //element.innerHTML='New Value';
 
 //move image
-var img=document.getElementById('img');
+/*var img=document.getElementById('img');
 img.onclick = function(){
     img.style.marginLeft='100px';
-};
+};*/
 //counter
-counter=0;
+//counter=0;
 var button=document.getElementById('counter');
 button.onclick = function(){
     //make a request
