@@ -43,10 +43,18 @@ button.onclick = function(){
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //make a requst to server
-     var request= new XMLHttpRequest();
+    // var request= new XMLHttpRequest();
     
     //capture
-    request.onreadystatechange = function(){
+     var names = ['name1','name2','name3'];
+      var list = '';
+                for(var i=0;i<names.length;i++)
+                {
+                    list += '<li>'+names[i]+'</li>';   
+                }
+                var ul= document.getElementById('namelist');
+                ul.innerHTML=list;
+  /*  request.onreadystatechange = function(){
       if(request.readyState === XMLHttpRequest.DONE)
       {
           //take action
@@ -69,7 +77,7 @@ submit.onclick = function(){
 var nameInput =document.getElmentbyId('name');
 var name = nameInput.value;
 request.open('GET','http://ksravyamalika.imad.hasura-app.io/submit-name?name='+name,true);
-   request.send(null);
+   request.send(null);*/
 };
 
 
