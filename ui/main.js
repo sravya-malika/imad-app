@@ -54,7 +54,7 @@ submit.onclick = function(){
                 }
                 var ul= document.getElementById('namelist');
                 ul.innerHTML=list;*/
-   request.onreadystatechange = function(){x
+   request.onreadystatechange = function(){
       if(request.readyState === XMLHttpRequest.DONE)
       {
           //take action
