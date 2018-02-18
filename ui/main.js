@@ -74,7 +74,7 @@ submit.onclick = function(){
           }
       }
 };
-var nameInput =document.getElmentbyId('name');
+var nameInput =document.getElmentById('name');
 var name = nameInput.value;
 request.open('GET','http://ksravyamalika.imad.hasura-app.io/submit-name?name='+name,true);
    request.send(null);
