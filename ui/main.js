@@ -38,8 +38,8 @@ button.onclick = function(){
 };
 
 
-var nameInput =document.getElmentbyId('name');
-var name = nameInput.value;
+
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //make a requst to server
@@ -66,7 +66,8 @@ submit.onclick = function(){
           }
       }
 };
-
+var nameInput =document.getElmentbyId('name');
+var name = nameInput.value;
 request.open('GET','http://ksravyamalika.imad.hasura-app.io/submit-name?name='+name,true);
    request.send(null);
 };
