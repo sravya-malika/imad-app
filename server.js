@@ -68,6 +68,7 @@ app.get('/counter', function (req, res) {
   res.send(path.join(counter.toString()));
 });
 
+
 var names = [];
 app.get('/submit-name',function(req,res){
     var name=req.query.name;
@@ -75,6 +76,7 @@ app.get('/submit-name',function(req,res){
     
     res.send(JSON.stringify(names));
 });
+
 
 
 app.get('/', function (req, res) {
