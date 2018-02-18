@@ -12,14 +12,14 @@ counter=0;
 var button=document.getElementById('counter');
 button.onclick = function(){
     //make a request
-  /*  var request= new XMLHttpRequest();
+   var request= new XMLHttpRequest();
     
     //capture
     request.onreadystatechange = function(){
-      if(request.readyState == XMLHttpRequest.DONE)
+      if(request.readyState === XMLHttpRequest.DONE)
       {
           //take action
-          if(request.status == 200)
+          if(request.status === 200)
           {
               var counter = request.responseText;
                var span=document.getElementById('count');
@@ -27,12 +27,12 @@ button.onclick = function(){
           }
       }
     };
-    */
+    
     //render in correct span
-   counter=counter+1;
-    var span=document.getElementById('count');
-    span.innerHTML=counter.toString();
+   //counter=counter+1;
+    //var span=document.getElementById('count');
+    //span.innerHTML=counter.toString();
 //   make a request
-   //request.open('GET','http://ksravyamalika.imad.hasura-app.io/',true);
-   //request.send(null);
+   request.open('GET','http://ksravyamalika.imad.hasura-app.io/',true);
+   request.send(null);
 };
