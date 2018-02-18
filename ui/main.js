@@ -33,6 +33,6 @@ button.onclick = function(){
     //var span=document.getElementById('count');
     //span.innerHTML=counter.toString();
 //   make a request
-   request.open('GET','http://ksravyamalika.imad.hasura-app.io/',true);
+   request.open('GET','http://ksravyamalika.imad.hasura-app.io/counter',true);
    request.send(null);
 };
