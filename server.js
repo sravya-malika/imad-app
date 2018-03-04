@@ -116,7 +116,7 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/articles/:articleNames', function (req, res) {
     
     
-     pool.query("SELECT * FROM article WHERE title=" + req.params.articleName, function(err,resutl){
+     pool.query("SELECT * FROM article WHERE title='" + req.params.articleName+"'", function(err,resutl){
         if(err){
             res.status(500).send(err.toString());
         } 
