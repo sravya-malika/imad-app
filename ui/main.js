@@ -1,3 +1,53 @@
+var submit_login=document.getElementById('submit_login')
+
+submit_login.onclick = function(){
+    //make a request
+   var request= new XMLHttpRequest();
+    
+    //capture
+    request.onreadystatechange = function(){
+      if(request.readyState === XMLHttpRequest.DONE)
+      {
+          //take action
+          if(request.status === 200)
+          {
+              alert('logged success');
+              
+          }
+          else if(request.status === 403)
+          {
+              alert('username/password is incorrect');
+          }
+          else if(request.status === 500)
+          {
+              alert('something went wrong');
+          }
+      }
+    };
+    
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+   request.open('POST','http://ksravyamalika.imad.hasura-app.io/login',true);
+   request.setRequestHeader('Content-Type','application/json');
+   request.send(JSON.stringify({username: username, password: password}));
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //var element = document.getElementById('main-text');
 //element.innerHTML='New Value';
@@ -46,14 +96,7 @@ submit.onclick = function(){
     var request= new XMLHttpRequest();
     
     //capture
-  /*   var names = ['name1','name2','name3'];
-      var list = '';
-                for(var i=0;i<names.length;i++)
-                {
-                    list += '<li>'+names[i]+'</li>';   
-                }
-                var ul= document.getElementById('namelist');
-                ul.innerHTML=list;*/
+  
    request.onreadystatechange = function(){
       if(request.readyState === XMLHttpRequest.DONE)
       {
